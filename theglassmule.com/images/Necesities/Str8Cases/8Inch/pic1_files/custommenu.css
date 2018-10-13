@@ -1,0 +1,256 @@
+/* general */
+.fix-header.hozmenu-container {
+    padding: 0 15px;
+}
+.hozmenu-container {
+    padding-left: 0;
+}
+.hozmenu-container:not(.fix-header) .pt_custommenu > .container {
+    padding: 0;
+    width: 100%;
+}
+.pt_custommenu {
+    font-size: 12px;
+    text-align: left;
+}
+.pt_custommenu .pt_menu {
+    display: inline-block;
+    margin-right: 40px;
+    position: relative;
+    text-align: left;
+    vertical-align: middle;
+}
+.pt_custommenu .pt_menu:last-child {
+    margin-right: 0;
+}
+/* first level */
+.pt_custommenu .parentMenu {
+    display: table;
+    height: 70px;
+}
+.pt_custommenu .parentMenu a {
+    color: #fff;
+    display: table-cell;
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 0 5px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+.pt_custommenu .parentMenu a:hover {
+    color: #fff;
+}
+.pt_custommenu .parentMenu a span {
+    padding: 0 0 5px 0;
+    position: relative;
+}
+.pt_custommenu .parentMenu a span:before {
+    background: #fff;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    right: 50%;
+    -webkit-transition: all .3s ease;
+       -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+         -o-transition: all .3s ease;
+            transition: all .3s ease;
+    width: 0;
+}
+.pt_custommenu .pt_menu.has_children .parentMenu a span:after {
+    content: '\f107';
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: 12px;
+    margin-left: 6px;
+    vertical-align: baseline;
+}
+.pt_custommenu .pt_menu.act .parentMenu a span:before,
+.pt_custommenu .pt_menu:hover .parentMenu a span:before {
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+/* SubMenu content*/
+.pt_custommenu .SubMenu {
+    border: 1px solid #ebebeb;
+    -webkit-box-shadow: 0 3px 15px -3px #bdbdbd;
+            box-shadow: 0 3px 15px -3px #bdbdbd;
+    margin: 0;
+    position: absolute;
+    text-align:left;
+    z-index: 3000;
+}
+.pt_custommenu .SubMenu .SubMenu-content {
+    background: #fff;
+    box-shadow: 5px 5px 7px 0 rgba(41, 41, 41, .05);
+    padding: 45px;
+    position: relative;
+}
+.pt_custommenu .SubMenu .SubMenu-content:after {
+    clear: both;
+    content: '.';
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+.pt_custommenu .SubMenu .block {
+    float: left; // in order to calculate width
+}
+.pt_custommenu .SubMenu a {
+    color: #292929;
+    cursor: pointer;
+    display: block;
+    font-size: 1em;
+    padding: 7px 0;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.pt_custommenu .SubMenu a:hover {
+    color: #a8ca01;
+}
+.pt_custommenu .SubMenu a.level1 {
+    color: #292929;
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+    font-size: 1.167em;
+    font-weight: 500;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+.pt_custommenu .SubMenu a.level1:hover {
+    color: #a8ca01;
+}
+/* image */
+.pt_custommenu .SubMenu .SubMenu-content img:hover {
+    opacity: .9;
+}
+.pt_custommenu .SubMenu img {
+    max-width: 100%;
+}
+/* Submenu layout */
+.pt_custommenu .SubMenu .column {
+    float: left;
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+    width: 180px;
+}
+/* responsive */
+@media screen and (min-width: 992px) {
+    .mobileMenu-container {
+        display: none;
+    }
+}
+@media screen and (max-width: 991px) {
+    .hozmenu-container {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: auto;
+    }
+    .mobileMenu-container ul {
+        list-style-type: none;
+    }
+    #mobileMenu .mobileMenu-toggle {
+        background: #8fb100;
+        color: #fff;
+        display: block;
+        font-size: 16px;
+        font-weight: normal;
+        height: 60px;
+        line-height: 60px;
+        padding: 0 15px;
+        text-align: left;
+        text-transform: uppercase;
+    }
+    #mobileMenu .mobileMenu-icon {
+        display: block;
+        float: right;
+        margin-left: 5px;
+    }
+    #ma-mobileSubMenu {
+        background: #fff;
+        -webkit-border-radius: 0 0 3px 3px;
+                border-radius: 0 0 3px 3px;
+        -webkit-box-shadow: 0 3px 5px rgba(0,0,0,.2);
+                box-shadow: 0 3px 5px rgba(0,0,0,.2);
+        left: 0;
+        margin:0;
+        overflow: hidden;
+        padding: 5px 15px;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        z-index: 999;
+    }
+    /* first level */
+    #ma-mobileSubMenu > li {
+        border-bottom: 1px solid #ebebeb;
+        position: relative;
+    }
+    #ma-mobileSubMenu > li:last-child {
+        border-bottom: none;
+    }
+    #ma-mobileSubMenu > li > a {
+        color: #333;
+        display: block;
+        font-size: 16px;
+        line-height: 40px;
+        text-transform: uppercase;
+    }
+    #ma-mobileSubMenu > li > a:hover {
+        color: #a8ca01;
+    }
+    /* level 2 and so on */
+    #ma-mobileSubMenu ul {
+        padding: 0 0 0 20px; /* override */
+    }
+    #ma-mobileSubMenu ul li {
+        border-top: 1px solid #ebebeb;
+        line-height: 40px;
+    }
+    #ma-mobileSubMenu ul li a {
+        color: #333;
+        display: block;
+        text-transform: capitalize;
+    }
+    #ma-mobileSubMenu ul li a:hover {
+        color: #a8ca01;
+    }
+    #ma-mobileSubMenu .ttclose,
+    #ma-mobileSubMenu .ttopen {
+        left: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    #ma-mobileSubMenu .ttclose a,
+    #ma-mobileSubMenu .ttopen a {
+        display: block;
+        line-height: 40px;
+    }
+    #ma-mobileSubMenu .ttclose a:before,
+    #ma-mobileSubMenu .ttopen a:before {
+        color: #333;
+        display: block;
+        font-size: 24px;
+        font-weight: normal;
+    }
+    #ma-mobileSubMenu .ttclose a:before {
+        content: ' + ';
+    }
+    #ma-mobileSubMenu .ttopen a:before {
+        content: ' - ';
+    }
+    #ma-mobileSubMenu .ttclose a:hover:before,
+    #ma-mobileSubMenu .ttopen a:hover:before {
+        color: #a8ca01;
+    }
+}
